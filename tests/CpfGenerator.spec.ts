@@ -6,7 +6,13 @@ describe('CpfGenerator', () => {
   let wrapper: ReturnType<typeof mount>
 
   beforeEach(() => {
-    wrapper = mount(CpfGenerator)
+    wrapper = mount(CpfGenerator, {
+      global: {
+        stubs: {
+          RouterLink: true,
+        },
+      },
+    })
   })
 
   it('renders title and button', () => {
@@ -18,9 +24,9 @@ describe('CpfGenerator', () => {
     await wrapper.find('button').trigger('click')
     await wrapper.vm.$nextTick()
   
-    const pre = wrapper.find('pre')
-    expect(pre.exists()).toBe(true)
-    expect(pre.text()).toMatch(/^\d{3}\.\d{3}\.\d{3}-\d{2}$/)
+    const p = wrapper.find('p.text-lg')
+    expect(p.exists()).toBe(true)
+    expect(p.text()).toMatch(/^\d{3}\.\d{3}\.\d{3}-\d{2}$/)
   })  
 
   it('shows feedback after generating', async () => {
