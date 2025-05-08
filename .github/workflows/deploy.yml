@@ -1,4 +1,4 @@
-name: Deploy React to GitHub Pages
+name: Deploy Vue App to GitHub Pages
 
 on:
   push:
@@ -23,6 +23,9 @@ jobs:
 
       - name: Instalar dependências
         run: npm install
+
+      - name: Rodar testes com Vitest
+        run: npx vitest run
 
       - name: Construir o projeto
         run: npm run build
