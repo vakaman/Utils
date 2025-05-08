@@ -6,7 +6,7 @@ import fs from 'fs'
 
 export default defineConfig({
   plugins: [tsconfigPaths(), vue()],
-  base: "/utils.dev/",
+  base: "/",
   server: {
     host: "0.0.0.0",
     port: 5173,
