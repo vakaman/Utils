@@ -1,7 +1,7 @@
 <template>
   <div>
     <header class="w-full bg-white shadow p-2 flex justify-center">
-      <div class="ad-wrapper">
+      <div ref="adWrapper" class="ad-wrapper">
         <ins
           class="adsbygoogle"
           style="display:block"
@@ -18,26 +18,30 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
+
+const adWrapper = ref(null)
 
 onMounted(() => {
-  const scriptId = 'adsense-script'
-  if (!document.getElementById(scriptId)) {
+  const id = 'adsense-script'
+  if (!document.getElementById(id)) {
     const s = document.createElement('script')
-    s.id = scriptId
-    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9288386921396586'
+    s.id = id
     s.async = true
+    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9288386921396586'
     s.crossOrigin = 'anonymous'
     document.head.appendChild(s)
   }
 
   setTimeout(() => {
     try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({})
+      if (adWrapper.value) {
+        (window.adsbygoogle = window.adsbygoogle || []).push({})
+      }
     } catch (e) {
       console.error('Adsense error:', e)
     }
-  }, 500)
+  }, 1000)
 })
 </script>
 
@@ -45,6 +49,6 @@ onMounted(() => {
 .ad-wrapper {
   width: 100%;
   max-width: 728px;
-  height: auto;
+  min-height: 90px;
 }
 </style>
