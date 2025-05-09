@@ -14,6 +14,9 @@
     </header>
 
     <router-view />
+
+    <RouterLink to="/privacy" class="text-sm text-gray-500 hover:underline">Privacy Policy</RouterLink>
+
   </div>
 </template>
 

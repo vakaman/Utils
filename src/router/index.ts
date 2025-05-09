@@ -4,6 +4,7 @@ import JsonFormatterView from '@/views/JsonFormatterView.vue';
 import Base64EncoderView from '@/views/Base64EncoderView.vue';
 import SlugGeneratorView from '@/views/SlugGeneratorView.vue';
 import CpfGeneratorView from '@/views/CpfGeneratorView.vue';
+import PrivacyPolicyView from '@views/PrivacyPolicyView.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: HomeView },
@@ -11,6 +12,7 @@ const routes = [
   { path: '/base64-encoder', name: 'Base64Encoder', component: Base64EncoderView },
   { path: '/slug-generator', name: 'SlugGenerator', component: SlugGeneratorView },
   { path: '/cpf-generator', name: 'CpfGeneratorView', component: CpfGeneratorView },
+  { path: '/privacy', name: 'PrivacyPolicy', component: PrivacyPolicyView }, 
 ];
 
 const router = createRouter({
