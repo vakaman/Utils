@@ -17,26 +17,8 @@
   </div>
 </template>
 
-<script setup>
-import { onMounted } from 'vue'
-
-onMounted(() => {
-  const scriptId = 'adsense-script'
-  if (!document.getElementById(scriptId)) {
-    const s = document.createElement('script')
-    s.async = true
-    s.id = scriptId
-    s.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9288386921396586'
-    s.crossOrigin = 'anonymous'
-    document.head.appendChild(s)
-
-    s.onload = () => {
-      (window.adsbygoogle = window.adsbygoogle || []).push({})
-    }
-  } else {
-    (window.adsbygoogle = window.adsbygoogle || []).push({})
-  }
-})
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
 <style scoped>
