@@ -37,7 +37,7 @@ export default [
     },
     {
         path: '/cpf-generator',
-        name: 'CpfGeneratorView',
+        name: 'CpfGenerator',
         component: CpfGeneratorView,
         meta: {
             isTool: true,
@@ -46,7 +46,7 @@ export default [
     },
     {
         path: '/uuid-generator',
-        name: 'UuidGeneratorView',
+        name: 'UuidGenerator',
         component: UuidGeneratorView,
         meta: {
             isTool: true,
@@ -55,7 +55,7 @@ export default [
     },
     {
         path: '/jwt-decoder',
-        name: 'JwtDecoderView',
+        name: 'JwtDecoder',
         component: JwtDecoderView,
         meta: {
             isTool: true,
@@ -79,5 +79,4 @@ export default [
             description: 'Test regular expressions and understand what each part of the pattern means.'
         }
     }
-
 ]
