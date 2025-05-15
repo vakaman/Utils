@@ -10,6 +10,9 @@
     "test:ui": "vitest --ui"
   },
   "dependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "uuid": "^11.1.0",
     "vue": "^3.4.21",
     "vue-router": "^4.5.1"
   },

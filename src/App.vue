@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="w-full bg-white shadow p-2 flex justify-center">
+    <!-- <header class="w-full bg-white shadow p-0 flex justify-center">
       <div ref="adWrapper" class="ad-wrapper">
         <ins
           class="adsbygoogle"
@@ -11,7 +11,7 @@
           data-full-width-responsive="true"
         ></ins>
       </div>
-    </header>
+    </header> -->
 
     <router-view />
 
@@ -52,6 +52,6 @@ onMounted(() => {
 .ad-wrapper {
   width: 100%;
   max-width: 728px;
-  min-height: 90px;
+  max-height: 150px;
 }
 </style>

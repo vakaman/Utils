@@ -9,7 +9,7 @@ describe('JsonFormatter', () => {
     wrapper = mount(JsonFormatter, {
       global: {
         stubs: {
-          RouterLink: true // evita o warning de componente não resolvido
+          RouterLink: true
         }
       }
     })
