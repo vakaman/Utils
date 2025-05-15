@@ -10,7 +10,7 @@ import RegexTesterView from '@/views/RegexTesterView.vue'
 export default [
     {
         path: '/json-formatter-and-schema-validator',
-        name: 'JsonFormatter',
+        name: 'Json Formatter',
         component: JsonFormatterView,
         meta: {
             isTool: true,
@@ -19,7 +19,7 @@ export default [
     },
     {
         path: '/base64-encoder',
-        name: 'Base64Encoder',
+        name: 'Base64 Encoder',
         component: Base64EncoderView,
         meta: {
             isTool: true,
@@ -28,7 +28,7 @@ export default [
     },
     {
         path: '/slug-generator',
-        name: 'SlugGenerator',
+        name: 'Slug Generator',
         component: SlugGeneratorView,
         meta: {
             isTool: true,
@@ -37,7 +37,7 @@ export default [
     },
     {
         path: '/cpf-generator',
-        name: 'CpfGenerator',
+        name: 'Cpf Generator',
         component: CpfGeneratorView,
         meta: {
             isTool: true,
@@ -46,7 +46,7 @@ export default [
     },
     {
         path: '/uuid-generator',
-        name: 'UuidGenerator',
+        name: 'Uuid Generator',
         component: UuidGeneratorView,
         meta: {
             isTool: true,
@@ -55,7 +55,7 @@ export default [
     },
     {
         path: '/jwt-decoder',
-        name: 'JwtDecoder',
+        name: 'Jwt Decoder',
         component: JwtDecoderView,
         meta: {
             isTool: true,
@@ -64,7 +64,7 @@ export default [
     },
     {
         path: '/timestamp-tools',
-        name: 'TimestampTools',
+        name: 'Timestamp Tools',
         component: TimeStampToolView,
         meta: {
             isTool: true,
@@ -72,7 +72,7 @@ export default [
         }
     }, {
         path: '/regex-tester-tool',
-        name: 'RegexTesterTools',
+        name: 'Regex Tester',
         component: RegexTesterView,
         meta: {
             isTool: true,
