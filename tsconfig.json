@@ -6,6 +6,13 @@
       "@components/*": ["src/components/*"],
       "@views/*": ["src/views/*"],
       "@utils/*": ["src/utils/*"]
-    }
+    },
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "target": "ESNext",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": false
   }
 }

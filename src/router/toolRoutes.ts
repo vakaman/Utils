@@ -6,8 +6,11 @@ import UuidGeneratorView from '@/views/UuidGeneratorView.vue'
 import JwtDecoderView from '@/views/JwtDecoderView.vue'
 import TimeStampToolView from '@/views/TimeStampToolView.vue'
 import RegexTesterView from '@/views/RegexTesterView.vue'
+import CronToolViewVue from '@/views/CronToolView.vue'
+import Base64imageConverterViewVue from '@/views/Base64imageConverterView.vue'
+import DnsLookupViewVue from '@/views/DnsLookupView.vue'
 
-export default [
+const routes = [
     {
         path: '/json-formatter-and-schema-validator',
         name: 'Json Formatter',
@@ -70,7 +73,8 @@ export default [
             isTool: true,
             description: 'A simple tool to convert and recognize common timestamp and date formats.'
         }
-    }, {
+    },
+    {
         path: '/regex-tester-tool',
         name: 'Regex Tester',
         component: RegexTesterView,
@@ -78,5 +82,34 @@ export default [
             isTool: true,
             description: 'Test regular expressions and understand what each part of the pattern means.'
         }
+    },
+    {
+        path: '/cron-tool',
+        name: 'Cron Tool',
+        component: CronToolViewVue,
+        meta: {
+            isTool: true,
+            description: 'Generate and test cron expressions easily.'
+        }
+    },
+    {
+        path: '/base64-image-converter',
+        name: 'Base64 Image Converter',
+        component: Base64imageConverterViewVue,
+        meta: {
+            isTool: true,
+            description: 'Convert images to Base64 and vice versa.'
+        }
+    },
+    {
+        path: '/dns-lookup-tool',
+        name: 'DNS Lookup Tool',
+        component: DnsLookupViewVue,
+        meta: {
+            isTool: true,
+            description: 'Do a DNS lookup for a domain name and get its IP address.'
+        }
     }
 ]
+
+export default routes
